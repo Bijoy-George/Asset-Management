@@ -1,0 +1,1 @@
+ if(!isset($_SESSION)) { session_start(); } if (isset($_SESSION['user_id']) && $_SESSION['user_id'] != '' ){ require_once("conf.php"); require_once("dash_header.php"); require_once("a_sidebar.php"); $select= "SELECT p.*,c.cat_name FROM products as p LEFT JOIN categories as c ON p.categories=c.id"; $query = mysqli_query($conn,$select); ?>
